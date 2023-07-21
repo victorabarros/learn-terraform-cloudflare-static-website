@@ -1,8 +1,12 @@
 provider "aws" {
-  region = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region     = var.aws_region
 }
 
-provider "cloudflare" {}
+provider "cloudflare" {
+  api_token = var.cloudflare_api_token
+}
 
 resource "random_pet" "bucket" {
   length = 1
