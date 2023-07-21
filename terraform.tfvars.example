@@ -1,2 +1,5 @@
-aws_region         = "us-east-1"
-site_domain        = ""
+aws_region           = ""
+aws_access_key       = ""
+aws_secret_key       = ""
+site_domain          = ""
+cloudflare_api_token = ""
