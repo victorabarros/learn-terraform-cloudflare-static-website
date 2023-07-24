@@ -12,7 +12,7 @@ provider "cloudflare" {
 }
 
 resource "aws_s3_bucket" "site" {
-  bucket = var.site_domain
+  bucket = var.bucket_name
 }
 
 resource "aws_s3_bucket_website_configuration" "site" {

@@ -12,6 +12,12 @@ variable "site_domain" {
   description = "The domain name to use for the static site"
 }
 
+variable "bucket_name" {
+  type        = string
+  description = "AWS Bucket name"
+  default     = "website-terramino"
+}
+
 variable "cloudflare_api_token" {
   type        = string
   description = "Cloudflare API token"
