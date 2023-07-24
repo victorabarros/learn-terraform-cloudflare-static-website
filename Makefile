@@ -1,10 +1,14 @@
-terraform-init:
+terraform-fmt:
+	@terraform fmt
+
+terraform-init: terraform-fmt
+	@rm -rf .terraform.lock.hcl
 	@terraform init
 
-terraform-plan:
+terraform-plan: terraform-fmt
 	@terraform plan -var-file=terraform.tfvars
 
-terraform-apply:
+terraform-apply: terraform-fmt
 	@terraform apply -auto-approve
 
 terraform-destroy:
